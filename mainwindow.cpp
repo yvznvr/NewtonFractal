@@ -99,11 +99,11 @@ void MainWindow::draw()
     }
     scene->addPixmap(QPixmap::fromImage(*image));
 
-    // eğer iterasyon sayısı yetersizse uyarı ver
+    // notify if all roots did not find correctly
     if(v.size()>sym.degree())
     {
         QMessageBox msgBox;
-        msgBox.setText("Didn't find all root correctly, try increase iteration");
+        msgBox.setText("Didn't find all roots correctly, try increase iteration");
         msgBox.exec();
     }
 }
